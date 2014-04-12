@@ -16,15 +16,15 @@
 #
 # -------------------------------------------------------------------------- #
 #
-# Quartus II 32-bit
-# Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-# Date created = 16:32:58  June 26, 2013
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+# Date created = 18:30:09  April 12, 2014
 #
 # -------------------------------------------------------------------------- #
 
 QUARTUS_VERSION = "13.0"
-DATE = "16:32:58  June 26, 2013"
+DATE = "18:30:09  April 12, 2014"
 
 # Revisions
 
-PROJECT_REVISION = "Computer"
+PROJECT_REVISION = "nand2tetris"
