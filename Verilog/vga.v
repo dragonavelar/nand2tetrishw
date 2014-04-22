@@ -60,7 +60,7 @@ always @ (posedge clk or posedge reset)
     end
     else
       video_on_h <= 1'b0;
-    if (v_count < 480) 
+    if (v_count <= 480) 
     begin
       video_on_v <= 1'b1;
       pixel_row <= v_count;

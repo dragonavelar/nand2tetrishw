@@ -8,14 +8,20 @@ reg [7:0] ram[16383:0];
 	
 always @ (posedge clk)
   if (we_a) 
+  begin
     ram[addr_a] <= data_a;
-  else 
+    q_a <= data_a;
+  end
+  else
     q_a <= ram[addr_a];
-	
+
 always @ (posedge clk)
   if (we_b)
+  begin
     ram[addr_b] <= data_b;
+    q_b <= data_b;
+  end
   else
     q_b <= ram[addr_b];
-	
+
 endmodule
