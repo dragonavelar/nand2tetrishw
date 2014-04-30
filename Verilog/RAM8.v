@@ -7,7 +7,7 @@ module RAM8(in,load,address,clock,out);
 	wire a,b,c,d,e,f,g,h;
 	wire [15:0] out0,out1,out2,out3,out4,out5,out6,out7;
 	
-	DMux8Way(load,address,a,b,c,d,e,f,g,h);
+	DMux8Way dmux1(load,address,a,b,c,d,e,f,g,h);
 	Registrador r1(in,a,clock,out0);
 	Registrador r2(in,b,clock,out1);
 	Registrador r3(in,c,clock,out2);
@@ -16,6 +16,6 @@ module RAM8(in,load,address,clock,out);
 	Registrador r6(in,f,clock,out5);
 	Registrador r7(in,g,clock,out6);
 	Registrador r8(in,h,clock,out7);
-	Mux8Way16(out0,out1,out2,out3,out4,out5,out6,out7,address,out);
+	Mux8Way16 mux1(out0,out1,out2,out3,out4,out5,out6,out7,address,out);
 	
 endmodule 

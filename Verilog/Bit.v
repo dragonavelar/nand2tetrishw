@@ -5,9 +5,9 @@ module Bit(in,load,clock,out);
 	wire out;
 	wire out1, outMux;
 	
-		Mux(out1,in,load,outMux);
-		DFFV(outMux, clock,out1);
-		OuBinario(out1,1'b 0,out);
+		Mux m1(out1,in,load,outMux);
+		DFFV d1(outMux, clock,out1);
+		OuBinario b1(out1,1'b 0,out);
 	
 
 	

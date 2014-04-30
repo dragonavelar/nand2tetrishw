@@ -1,11 +1,10 @@
-module Add16(A,B,cin,out,cout);
+module Add16(A,B,out);
 	input [15:0] A,B;
-	input cin;
 	output [15:0] out;
-	output cout;
 	
 	wire c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14;
-	FullAdder a00(A[0],B[0],cin,out[0],c0);
+	
+	HalfAdder a00(A[0],B[0],out[0],c0);
 	FullAdder a01(A[1],B[1],c0,out[1],c1);
 	FullAdder a02(A[2],B[2],c1,out[2],c2);
 	FullAdder a03(A[3],B[3],c2,out[3],c3);
@@ -20,7 +19,7 @@ module Add16(A,B,cin,out,cout);
 	FullAdder a12(A[12],B[12],c11,out[12],c12);
 	FullAdder a13(A[13],B[13],c12,out[13],c13);
 	FullAdder a14(A[14],B[14],c13,out[14],c14);
-	FullAdder a15(A[15],B[15],c14,out[15],c15);
+	FullAdder a15(A[15],B[15],c14,out[15]);
 	
 	
 endmodule 
